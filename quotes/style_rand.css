@@ -1,184 +1,52 @@
-// Color Variables
-$background: #fff
-$color: #00CC8F
+body, html {
+  background: #fff;
+  color: #333;
+  font-size: 20px;
+  line-height: 1.8em;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0; }
 
-// Basic Page CSS
-body, html
-  background: $background
-  color: #333
-  font-size: 20px
-  line-height: 1.8em
-  margin: 0
-  overflow-x: hidden
-  padding: 0
-  
-h1, h2, h3, h4, h5, h6
-  color: #1a1a1a
-  line-height: 1.2em
-  margin: 2.1em 0 0.7em
-  
-h1
-  font-size: 2em
-h2
-  font-size: 1.8em
-h3
-  font-size: 1.6em
-h4
-  font-size: 1.4em
-h5
-  font-size: 1.2em
-h6
-  font-size: 1em
-  
-a
-  color: #00B881
+.container {
+  max-width: 960px;
+  padding: 0 6em 3em; }
 
-.container
-  max-width: 960px
-  padding: 0 6em 3em
-
-// Featured Image CSS
-.diagonal
-  position: relative
-  width: 100%
-  background: url("https://unsplash.it/1920/1080?image=901") no-repeat
-  background-attachment: fixed
-  background-size: cover
-  color: $background
-  display: flex
-  height: 52vh
-  justify-content: center
-
-  &:before
-    content: ''
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-    left: 0
-    background: rgba(0, 0, 0, 0.5)
-
-  &:after
-    content: ''
-    position: absolute
-    right: -10px
-    bottom: -1px
-    border-left-color: $background
-    border-left-style: solid
-    border-left-width: calc(100vw + 10px) 
-    border-top: 12vw solid transparent
-  
-  h1
-    color: $background
-    display: flex
-    position: relative
-    justify-content: center
-    align-items: center
-    height: 100%
-    margin-top: -1em
-    
-// Blockquote CSS
-blockquote
-  border-left: 3px solid $color
-  color: #1a1a1a
-  font-family: Georgia, Times, "Times New Roman", serif
-  font-size: 1.25em
-  font-style: italic
-  line-height: 1.8em
-  margin: 1.1em -4em
-  padding: 1em 2em
-  position: relative
-  transition: .2s border ease-in-out
-  z-index: 0
-  &:before
-    content: ""
-    position: absolute
-    top: 50%
-    left: -4px
-    height: 2em
-    background-color: $background
-    width: 5px
-    margin-top: -1em
-  &:after
-    content: "\f35f"
-    position: absolute
-    top: 50%
-    left: -0.5em
-    color: $color
-    font-family: "Ionicons"
-    font-style: normal
-    line-height: 1em
-    text-align: center
-    text-indent: -2px
-    width: 1em
-    margin-top: -0.5em
-    transition: .2s all ease-in-out, .4s transform ease-in-out
-  &.format:before, &.format:after
-    display: none
-  &.book:after
-    content: "\f12e"
-  &.podcast:after
-    content: "\f32d"
-  &.lyrics:after
-    content: "\f333"
-  &.favorite:after
-    content: "\f384"
-  &:active:after
-    transform: rotateY(360deg)
-    
-  cite
-    display: block
-    font-size: 0.75em
-    line-height: 1.8em
-    margin-top: 1em
-    
-// Media Queries
-@media (max-width: 1200px)
-  body, html
-    font-size: 18px
-    
-@media (max-width: 980px)
-  body, html
-    font-size: 16px
-  .container
-    max-width: 720px
-    padding: 0 3em 3em
-  blockquote
-    font-size: 1.1em
-    margin: 1.1em -2em
-    
-@media (max-width: 767px)
-  body, html
-    font-size: 16px
-  .container
-    padding: 0 2em 3em
-  blockquote
-    border-top: 2px solid $color
-    border-bottom: 2px solid $color
-    border-left: none
-    margin: 1.5em 0
-    padding: 1.5em 1em
-    &:before
-      left: 50%
-      top: 0
-      height: 4px
-      margin-top: -3px
-      margin-left: -1em
-      width: 2em
-    &:after
-      font-size: 0.75em
-      left: 50%
-      top: 0
-      margin-top: -0.5em
-      margin-left: -0.5em
-    
-    cite
-      text-align: right
-      
-// Scrollbar Exploration
-//html::-webkit-scrollbar-track
-//  background-color: #e5e5e5
-//html::-webkit-scrollbar-thumb
-//  background-color: #a6a6a6
-//html::-webkit-scrollbar
-//  width: 10px
+blockquote {
+  border-left: 3px solid #00CC8F;
+  color: #1a1a1a;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.8em;
+  margin: 1.1em -4em;
+  padding: 1em 2em;
+  position: relative;
+  z-index: 0; }
+  blockquote:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    height: 2em;
+    background-color: #fff;
+    width: 5px;
+    margin-top: -1em; }
+  blockquote:after {
+    content: "\f35f";
+    position: absolute;
+    top: 50%;
+    left: -0.5em;
+    color: #00CC8F;
+    font-family: "Ionicons";
+    font-style: normal;
+    line-height: 1em;
+    text-align: center;
+    text-indent: -2px;
+    width: 1em;
+    margin-top: -0.5em;
+    }
+  blockquote cite {
+    display: block;
+    font-size: 0.75em;
+    line-height: 1.8em;
+    margin-top: 1em; }
