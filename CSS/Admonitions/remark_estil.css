@@ -8,15 +8,15 @@ body{
 }
 
 .contenidor_gran {
-  max-width: 61rem; /*MODIFICAR*/
+  max-width: 60rem; /*MODIFICAR*/
   margin-right: auto;
   margin-left: auto;
 }
 
 @media only screen and (min-width: 60em) {
   .contenidor_interior {
-    margin-right: 12.1rem;
-    margin-left: 12.1rem;
+    margin-right: 0.1rem;
+    margin-left: 0.1rem;
   }
 }
 
