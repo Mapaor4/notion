@@ -6,6 +6,10 @@ body{
   font-feature-settings: "kern","liga";
 }
 
+.contenidor{
+    top: 50%;
+    transform: translate(0, 50%);
+}
 
 .caixa{
   line-height: 1.6;
