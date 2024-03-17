@@ -1,0 +1,59 @@
+
+
+body{
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: rgba(0,0,0,.87);
+  font-feature-settings: "kern","liga";
+}
+
+
+.caixa{
+  line-height: 1.6;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+  position: relative;
+  margin: 0.3rem 0 0.3rem;
+  padding: 0 .6rem;
+  border-left: 0.3em solid #448aff;
+  border-radius: .1rem;
+  overflow: auto;
+  font-size: 0.87rem;
+  border-left-color: #00b8d4;
+}
+
+
+/* TITOL */
+.caixa > .titol{
+  background-color: rgba(0,184,212,.1);
+
+  margin: 0 -.6rem;
+  padding: .4rem .6rem .4rem 1.0em;
+  /*MODIFICAR EL ÚLTIM 2rem*/
+  border-bottom: .05rem solid;
+  border-bottom-color: rgba(68, 138, 255, 0.1);
+  
+  font-weight: 700;  
+}
+
+
+
+/* ICONA */
+.caixa > .titol::before{
+  margin-right: 0.2em;
+  position: relative;
+  right: 0.1em;
+  top: 0.2em;
+  color: #00b8d4;
+  font-size: 1.6em;
+  font-family: "Material Icons";
+  content: "\e88e";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr; 
+}
+
+
