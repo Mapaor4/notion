@@ -47,7 +47,7 @@ body{
 
 /* ICONA */
 .caixa > .titol::before{
-  margin-right: 0.2em;
+  margin-right: 0.3em;
   position: relative;
   right: 0.1em;
   top: 0.2em;
