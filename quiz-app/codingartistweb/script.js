@@ -19,8 +19,8 @@ let countdown;
 const quizArray = [
   {
     id: "0",
-    question: "Which is the most widely spoken language in the world?",
-    options: ["Spanish", "Mandarin", "English", "German"],
+    question: "Which is the most widely spoken $e^{i\pi}+1=0$ language in the world?$$\sin(x)\approx x$$",
+    options: ["Spanish", "Mandarin $2^2$", "English", "German"],
     correct: "Mandarin",
   },
   {
