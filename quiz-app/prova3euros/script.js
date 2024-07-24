@@ -1,8 +1,8 @@
 const questions = [
     {
-        question: "Which is larget animal in the world?",
+        question: "Which is larget animal in the $2^2$ world?",
         answers: [
-            { text: "Shark", correct: false},
+            { text: "Shark $e^{i\pi}+1=0$", correct: false},
             { text: "Blue whale", correct: true},
             { text: "Elephant", correct: false},
             { text: "Giraffe", correct: false},
