@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "Which is larget animal in the $2^2$ world?",
+        question: "Which is larget animal in thhhe $2^2$ world?",
         answers: [
             { text: "Shark $e^{i\pi}+1=0$", correct: false},
             { text: "Blue whale", correct: true},
