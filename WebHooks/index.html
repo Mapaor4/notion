@@ -2,26 +2,31 @@
 <body>
 	<script>
           function fireWebHook(id) {
-          // Construct the URL with the passed ID
-          const url = `https://hook.eu2.make.com/wq076o1u3w1kfah5jtbs91dwhsultsd5?id=${id}`;
-          
-          // Fetch the webhook URL
-          fetch(url)
-          .then(response => response.text())  // Get the response as plain text
-          .then(data => {
-              if (data && !isNaN(data)) {  // Check if the response contains a valid new ID
-                  console.log('New ID:', data);
-      
-                  // Recursively call the function with the new ID
-                  fireWebHook(data);
-              } else {
-                  console.log('No new ID or invalid response.');
-              }
-          })
-          .catch(error => {
-              console.error('Error:', error);  // Handle any errors
-          });
-          }
+    // Construct the URL with the passed ID
+    const url = `https://hook.eu2.make.com/uxdfah66e520o1xm4qvo6nd67tand2hs?id=${id}`;
+    //console.log("URL:", url);
+    //console.log("Activating webhook with ID:", id);
+
+    // Fetch the webhook URL
+    fetch(url)
+        .then(response => response.text())  // Extract response body as plain text
+        .then(data => {
+            //console.log('Response body:', data);  // Log the actual response body
+
+            // Check if the response is a valid ID (contains only lowercase letters and numbers)
+            if (/^[a-z0-9]+$/.test(data)) {
+                //console.log('New ID:', data);
+
+                // Recursively call fireWebHook with the new ID
+                fireWebHook(data);
+            } else {
+                console.log('No new ID or invalid response:', data);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error.message);  // Simplified error handling
+        });
+	}
 	</script>
 
 	 <style>
