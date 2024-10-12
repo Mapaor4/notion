@@ -2,16 +2,15 @@
 <body>
 	<script>
           function fireWebHook(id) {
-    const url = `https://hook.eu2.make.com/mzvdygrw1377sm2ol18r7v82p5jj5jtc?id=${id}`; // URL del WebHooks de Make amb l'ID (pàgina) passat com a paràmetre a la funció
+    const url = `https://hook.eu2.make.com/mzvdygrw1377sm2ol18r7v82p5jj5jtc?id=${id}`; // URL del WebHooks de Make amb l'ID (pàgina) passat com a paràmetre
     //console.log("URL:", url);
     //console.log("Activant webhook amb ID:", id);
-
-    // Fetch webhook URL
+		  
+    // Activem (fetch) el webhook
     fetch(url)
         .then(response => response.text())  // Response body com a plain text
         .then(data => {
             //console.log('Response body:', data);  // Ho passem per consola per comprovar
-
             // Mirem si la resposta és un ID vàlid (només conté números i lletres en minúscula)
             if (/^[a-z0-9]+$/.test(data)) {
                 //console.log('Nou ID:', data);
