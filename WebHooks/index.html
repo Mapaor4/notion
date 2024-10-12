@@ -2,29 +2,28 @@
 <body>
 	<script>
           function fireWebHook(id) {
-    // Construct the URL with the passed ID
-    const url = `https://hook.eu2.make.com/mzvdygrw1377sm2ol18r7v82p5jj5jtc?id=${id}`;
+    const url = `https://hook.eu2.make.com/mzvdygrw1377sm2ol18r7v82p5jj5jtc?id=${id}`; // URL del WebHooks de Make amb l'ID (pàgina) passat com a paràmetre a la funció
     //console.log("URL:", url);
-    //console.log("Activating webhook with ID:", id);
+    //console.log("Activant webhook amb ID:", id);
 
-    // Fetch the webhook URL
+    // Fetch webhook URL
     fetch(url)
-        .then(response => response.text())  // Extract response body as plain text
+        .then(response => response.text())  // Response body com a plain text
         .then(data => {
-            //console.log('Response body:', data);  // Log the actual response body
+            //console.log('Response body:', data);  // Ho passem per consola per comprovar
 
-            // Check if the response is a valid ID (contains only lowercase letters and numbers)
+            // Mirem si la resposta és un ID vàlid (només conté números i lletres en minúscula)
             if (/^[a-z0-9]+$/.test(data)) {
-                //console.log('New ID:', data);
+                //console.log('Nou ID:', data);
 
-                // Recursively call fireWebHook with the new ID
+                // Cridem redursivamen el WehHook amb el nou ID (del bloc fill)
                 fireWebHook(data);
             } else {
-                console.log('No new ID or invalid response:', data);
+                console.log('No s'ha rebut cap nou ID o resposta invàlida:', data);
             }
         })
         .catch(error => {
-            console.error('Error:', error.message);  // Simplified error handling
+            console.error('Error:', error.message);  // Mostrem l'error per consola
         });
 	}
 	</script>
@@ -47,7 +46,7 @@
 
 <div class="container">
   <div class="center">
-	  <button class="boto-generar" onclick="fireWebHook('27ce4dfb5f5543e8bcaad63dd3ea1d8b')">Disparar WebHooks</button>
+	  <button class="boto-generar" onclick="fireWebHook('27ce4dfb5f5543e8bcaad63dd3ea1d8b')">Renderitzar LaTeX</button> <!-- Pàgina inicial des de la qual disparar el WebHook -->
   </div>
 </div>
     
