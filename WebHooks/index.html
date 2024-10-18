@@ -23,11 +23,12 @@
 
 <div class="container">
   <div class="center">
-      <button class="boto-generar" onclick="fireWebHook('27ce4dfb5f5543e8bcaad63dd3ea1d8b'); console.log('button working');">Renderitzar KaTeX</button> 
+      <button class="boto-generar" onclick="console.log('button working');">Renderitzar KaTeX</button> 
   </div>
 </div>
 
 <script>
+    // fireWebHook('27ce4dfb5f5543e8bcaad63dd3ea1d8b'); 
     function fireWebHook(id) {
         const url = `https://hook.eu2.make.com/mzvdygrw1377sm2ol18r7v82p5jj5jtc?id=${id}`; // URL del WebHooks de Make amb l'ID (pàgina) passat com a paràmetre
         console.log("URL:", url);
