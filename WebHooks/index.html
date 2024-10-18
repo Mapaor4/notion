@@ -11,13 +11,13 @@
             position: relative;
           }
           
-          .center {
+          .center { /*Centrem el botó (el contenidor div) */
             margin: 0;
             position: absolute;
             top: 50%;
             left: 50%;
             -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
           }
      </style>
 
@@ -32,7 +32,7 @@
         const url = `https://hook.eu2.make.com/mzvdygrw1377sm2ol18r7v82p5jj5jtc?id=${id}`; // URL del WebHooks de Make amb l'ID (pàgina) passat com a paràmetre
         // console.log("URL:", url);
         // console.log("Activating webhook with ID:", id);
-              
+        //
         // Activem (fetch) el webhook
         fetch(url)
             .then(response => response.text())  // Response body com a plain text
@@ -45,7 +45,7 @@
                     // Cridem recursivament el WehHook amb el nou ID (del bloc fill)
                     fireWebHook(data);
                 } else {
-                    console.log('No sha rebut cap nou ID o resposta invàlida:', data);
+                    console.log('O no sha rebut cap nou ID o resposta invàlida:', data);
                 }
             })
             .catch(error => {
