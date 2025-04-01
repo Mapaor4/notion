@@ -4,4 +4,4 @@ Podem generar htmls ja sigui amb plotly o amb asymptote o amb manim slides o com
 
 En general el html simplement té un link a un codi en javascript.
 
-Algun dia tocaria aprendre javascript.
+Actualment estic aprenent javascript.
