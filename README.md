@@ -5,4 +5,4 @@ Podem generar htmls ja sigui amb plotly o amb asymptote o amb manim slides o com
 En general simplement és HTML enllaçat amb un fitxer javascript.
 
 Exemples:
-- [Riemann Surface](Asymptote/Riemann Surface.html)
+- [Riemann Surface](https://mapaor4.github.io/notion/Asymptote/Riemann%20Surface.html)
