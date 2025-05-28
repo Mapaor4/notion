@@ -2,6 +2,7 @@ Molt bé, aquí hi haurà tots els .html que es puguin posar com a embed a Notio
 
 Podem generar htmls ja sigui amb plotly o amb asymptote o amb manim slides o com sigui.
 
-En general el html simplement té un link a un codi en javascript.
+En general simplement és HTML enllaçat amb un fitxer javascript.
 
-Actualment estic aprenent javascript.
+Exemples:
+- [Riemann Surface](Asymptote/Riemann Surface.html)
